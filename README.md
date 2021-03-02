@@ -1,11 +1,13 @@
 [Learn VueJS by building a simple Todo-App](https://medium.com/@hugo.bjarred/learn-vuejs-by-building-a-simple-todo-app-44e2e7dfccae)
 
+
 ## reference
 https://medium.com/@hugo.bjarred/learn-vuejs-by-building-a-simple-todo-app-44e2e7dfccae
 
 ## Project setup
 ```
 npm install
+npm i save-dev @types/uuid
 ```
 
 ### Compiles and hot-reloads for development

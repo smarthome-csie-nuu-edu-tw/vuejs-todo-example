@@ -1,17 +1,21 @@
+// v-on為定義事件 事件名稱add-todo時呼叫addTodo(method)
 <template>
   <div id="app">
     <Todos v-bind:todos="todos"/>
+    <AddTodo v-on:add-todo="addTodo" />
   </div>
 </template>
 
 <script>
-import Todos from './components/Todos'
+import Todos from './components/Todos';
+import AddTodo from './components/AddTodo';
 
 // 初始Demo資料輸入
 export default {
   name: 'App',
   components: {
-    Todos
+    Todos,
+    AddTodo
   },
   data() {
     return {
@@ -49,6 +53,12 @@ export default {
       ],
     }
   },
+  methods: {
+    // addTodo將todo物件加入到todo的陣列清單(...是spread operator)
+    addTodo(newTodoObj){
+      this.todos = [...this.todos, newTodoObj];
+    }
+  }
 }
 </script>
 
