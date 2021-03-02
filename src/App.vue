@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    
+    <Todos v-bind:todos="todos"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Todos from './components/Todos'
 
 // 初始Demo資料輸入
 export default {
   name: 'App',
+  components: {
+    Todos
+  },
   data() {
     return {
       todos: [
