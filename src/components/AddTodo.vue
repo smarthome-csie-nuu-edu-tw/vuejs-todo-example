@@ -29,7 +29,7 @@ export default {
             const newTodoObj = {
                 id: uuidv4(),
                 title: this.title,
-                complete: false
+                completed: false
             }
 
             this.$emit('add-todo', newTodoObj);

@@ -23,32 +23,32 @@ export default {
         {
           id: 1,
           title: 'pfsense HAProxy',
-          complete: true
+          completed: true
         },
         {
           id: 2,
           title: 'pfsense Suricata',
-          complete: true
+          completed: true
         },
         {
           id: 3,
           title: 'pfsense OpenVPN',
-          complete: true
+          completed: true
         },
         {
           id: 4,
           title: 'pfsense on Vmware',
-          complete: true
+          completed: true
         },
         {
           id: 5,
           title: 'pfsense ACME',
-          complete: true
+          completed: true
         },
         {
           id: 6,
           title: 'pfsense BIND DNS',
-          complete: false
+          completed: false
         }
       ],
     }
