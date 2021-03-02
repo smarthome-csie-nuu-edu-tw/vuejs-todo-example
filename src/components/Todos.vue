@@ -2,10 +2,10 @@
 
 <template>
     <div>
-        <h2> Todo List </h2>
+        <h2> Server Todo List (Add delete Complete)</h2>
         <ul>
             <li v-bind:key="todo.id" v-for="todo in todos">
-                <Todo v-bind:todo="todo" />
+                <Todo v-bind:todo="todo" v-on:delete-todo="$emit('delete-todo', todo.id)"/>
             </li>
         </ul>
     </div>

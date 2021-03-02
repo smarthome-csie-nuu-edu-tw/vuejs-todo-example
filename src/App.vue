@@ -1,7 +1,7 @@
 // v-on為定義事件 事件名稱add-todo時呼叫addTodo(method)
 <template>
   <div id="app">
-    <Todos v-bind:todos="todos"/>
+    <Todos v-bind:todos="todos" v-on:delete-todo="deleteTodo"/>
     <AddTodo v-on:add-todo="addTodo" />
   </div>
 </template>
@@ -57,6 +57,9 @@ export default {
     // addTodo將todo物件加入到todo的陣列清單(...是spread operator)
     addTodo(newTodoObj){
       this.todos = [...this.todos, newTodoObj];
+    },
+    deleteTodo(todoId){
+      this.todos = this.todos.filter(todo => todo.id !== todoId);
     }
   }
 }
